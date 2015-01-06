@@ -111,16 +111,11 @@ describe('TransactionBuilder', function() {
   });
 
 
-  it('headAddress put utxo of given address first selected', function() {
-    var b = new TransactionBuilder({spendUnconfirmed: true, headAddress: 'mhNCT9TwZAGF1tLPpZdqfkTmtBkY282YDW'})
+  it('put utxo of given address first selected', function() {
+    var b = new TransactionBuilder({spendUnconfirmed: true})
       .setUnspent(testdata.dataUnspent2)
       ._selectUnspent(1.01 * util.COIN);
-    b.selectedUtxos[0].address.should.equal('mhNCT9TwZAGF1tLPpZdqfkTmtBkY282YDW');
-
-    b = new TransactionBuilder({spendUnconfirmed: true})
-      .setUnspent(testdata.dataUnspent2)
-      ._selectUnspent(1.01 * util.COIN);
-    b.selectedUtxos[0].address.should.not.equal('mhNCT9TwZAGF1tLPpZdqfkTmtBkY282YDW');
+    b.selectedUtxos[0].txid.should.equal(testdata.dataUnspent2[2].txid);
   });
 
   var getBuilder2 = function (fee) {
