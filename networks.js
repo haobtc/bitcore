@@ -34,7 +34,8 @@ exports.bitcoin = {
     'seed.bitnodes.io',
     'bitseed.xf2.org'
   ],
-  defaultClientPort: 8333
+  defaultClientPort: 8333,
+  protocolVersion: 70002
 };
 exports.mainnet = exports.bitcoin;
 
@@ -62,7 +63,8 @@ exports.dogecoin = {
     'seed.dglibrary.org',
     'seed.dogechain.info'
   ],
-  defaultClientPort: 22556
+  defaultClientPort: 22556,
+  protocolVersion: 70003
 };
 
 exports.litecoin = {
@@ -90,7 +92,8 @@ exports.litecoin = {
     'dnsseed.koin-project.com',
     'dnsseed.weminemnc.com'
   ],
-  defaultClientPort: 9333
+  defaultClientPort: 9333,
+  protocolVersion: 70002
 };
 
 exports.darkcoin = {
@@ -116,7 +119,8 @@ exports.darkcoin = {
     'dnsseed.darkcoin.io',
     'dnsseed.ddarkcoin.qa'
   ],
-  defaultClientPort: 9999
+  defaultClientPort: 9999,
+  protocolVersion: 70076
 };
 
 // Currently we only use bitcon testnet
@@ -142,7 +146,8 @@ exports.testnet = {
     'testnet-seed.bitcoin.petertodd.org',
     'testnet-seed.bluematt.me'
   ],
-  defaultClientPort: 18333
+  defaultClientPort: 18333,
+  protocolVersion: 70002
 };
 
 exports.supportedNetnames = ['bitcoin', 'litecoin', 'dogecoin', 'darkcoin'];
