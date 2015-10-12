@@ -101,6 +101,7 @@ describe('Transaction', function() {
                 dontVerifyStrictEnc: true
               },
               function(err, results) {
+                console.info('xxxx', err);
                 if (valid) {
                   should.not.exist(err);
                   should.exist(results);
